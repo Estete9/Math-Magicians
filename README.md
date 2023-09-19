@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./assets/logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/logo.svg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Math Magicians - React Calculator</b></h3>
