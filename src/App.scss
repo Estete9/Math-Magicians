@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .app-main {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,10 +36,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 #calculator-wrapper {
   width: 700px;
   height: 500px;
@@ -79,4 +82,4 @@
 
 #zero {
   grid-column-end: span 2;
-}/*# sourceMappingURL=App.css.map */
+}
