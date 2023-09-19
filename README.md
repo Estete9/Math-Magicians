@@ -4,7 +4,7 @@
   <img src="./assets/logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>YOUR-PROJECT-NAME-HERE</b></h3>
+  <h3><b>Math Magicians - React Calculator</b></h3>
 
 </div>
 
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 REACT TEMPLATE <a name="about-project"></a>
+# 📖 Math Magicians - React Calculator <a name="about-project"></a>
 
-**REACT TEMPLATE** This template is focused on being a base project using Webpack and all the core libraries needed.
+**Math Magicians** This template is focused on being a base project using Webpack and all the core libraries needed.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,17 +42,9 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">HTML</a></li>
-    <li><a href="https://reactjs.org/">CSS (including responsive design)</a></li>
-    <li><a href="https://reactjs.org/">JavaScript for menu functionality</a></li>
-    <li><a href="https://webpack.js.org">Webpack</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href=https://legacy.reactjs.org/docs/introducing-jsx.html>JSX</a></li>
+    <li><a href="https://sass-lang.com">SASS - SCSS</a></li>
+    <li><a href="https://reactjs.org/">React</a></li>
   </ul>
 </details>
 
@@ -60,9 +52,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Responsive design for mobile and desktop]**
-- **[Menu functionality using JavaScript]**
-- **[Use of modules and libraries]**
+- **[Full react app]**
+- **[Use of SASS]**
+- **[Use of react components, props and state]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,31 +69,29 @@ To get a local copy up and running, follow these steps.
 To run this project you need:
 
 - VSCode
-- npm
 - Node
+- Web Browser
 
 ### Setup
 
-Make sure you have VSCode, npm, and Node installed
+Make sure you have VSCode, Node and a Web Browser installed
+Make sure eslint-config-airbnb is installed or use `npm install eslint-config-airbnb eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-import --save-dev
+`
 
 ### Install
 In the root folder, run the script `npm install` to install all the libraries necessary.
 
 ### Usage
-#### Webpack
-Run the scripts:
-- Each time before running your page use `npm run build` so webpack creates the necessary files in the dist folder
-- `npm run watch-webpack` to only have Webpack watch your files or
-- `npm run watch` to watch the tests and Webpack changes
+
 #### Live Demo
-- Run the script `npm run start` to see a live version of the project
+- Run the script `npm start` to see a live version of the project
 
 
 ### Run tests
 
 Use the scripts: 
-- `npm run watch-jest` to only watch your tests with Jest or 
-- `npm run watch` to watch the tests and Webpack changes
+- `npm run test` to run your tests
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
