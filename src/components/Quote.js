@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react';
 
 function Quote() {
   const baseUrl = 'https://api.api-ninjas.com/v1/quotes?category=knowledge';
-  const [quoteResponse, setQuote] = useState({
-    quote: 'this is a quote',
-    author: 'this is the author',
-    category: 'computers',
-  });
+  const [quoteResponse, setQuote] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(baseUrl, {
       method: 'GET',
       headers: {
@@ -16,9 +14,13 @@ function Quote() {
       },
     })
       .then((resp) => resp.json())
-      .then((data) => setQuote(data));
+      .then((data) => {
+        setQuote(data);
+        setIsLoading(false);
+      });
   }, []);
 
+  if (isLoading) return <div>loading...</div>;
   return (
     <div id="quote-wrapper">
       <h6 id="quote">
