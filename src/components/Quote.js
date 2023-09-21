@@ -4,23 +4,39 @@ function Quote() {
   const baseUrl = 'https://api.api-ninjas.com/v1/quotes?category=knowledge';
   const [quoteResponse, setQuote] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    setIsLoading(true);
-    fetch(baseUrl, {
-      method: 'GET',
-      headers: {
-        'X-Api-Key': 'KdVLHMbgPDKurv3dbkJsVg==dpDNbHcHUZXmZHsx',
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const response = await fetch(baseUrl, {
+          method: 'GET',
+          headers: {
+            'X-Api-Key': 'KdVLHMbgPDKurv3dbkJsVg==dpDNbHcHUZXmZHsx',
+          },
+        });
+        if (!response.ok) {
+          throw new Error(
+            `Couldn't retrieve quote. Status: ${response.status}`,
+          );
+        }
+        const data = await response.json();
         setQuote(data);
         setIsLoading(false);
-      });
+      } catch (error) {
+        setError(true);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (isLoading) return <div>loading...</div>;
+  if (error) return <div>{`Couldn't retrieve quote. Error: ${error}`}</div>;
+  if (!quoteResponse) return null;
   return (
     <div id="quote-wrapper">
       <h6 id="quote">
