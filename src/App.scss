@@ -17,7 +17,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  gap: 50px;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -43,8 +43,13 @@
 }
 
 #calculator-wrapper {
-  width: 700px;
-  height: 500px;
+  width: 40%;
+}
+
+#quote-wrapper {
+  width: 40%;
+  color: white;
+  font-size: 2rem;
 }
 
 #display {
@@ -78,10 +83,8 @@
   grid-column-end: span 2;
 }
 
-
 .number,
 .support {
   background-color: #e0e0e0;
   color: black;
 }
-

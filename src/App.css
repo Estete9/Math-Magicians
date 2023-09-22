@@ -12,12 +12,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .app-main {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  gap: 50px;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -36,15 +35,18 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 #calculator-wrapper {
-  width: 700px;
-  height: 500px;
+  width: 40%;
+}
+
+#quote-wrapper {
+  width: 40%;
+  color: white;
+  font-size: 2rem;
 }
 
 #display {
