@@ -1,8 +1,11 @@
+import Calculator from '../components/Calculator';
+
 function CalculatorScreen() {
   return (
     // <div className='wrapper'>
-    <div className="calculator">this is the calculator</div>
+    <Calculator />
     // </div>
   );
 }
+
 export default CalculatorScreen;

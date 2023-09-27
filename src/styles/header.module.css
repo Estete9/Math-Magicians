@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  list-style: none;
+  align-items: center;
+}
+
+.separator {
+  border-left: 1px solid #000;
+  height: 50%;
+  margin: 0 10px;
+}
+
+.navItem {
+  font-weight: bold;
+}
+
+.navItem:hover {
+  cursor: pointer;
+}

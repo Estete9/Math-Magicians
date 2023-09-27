@@ -6,19 +6,16 @@ import './App.css';
 import Home from './Routes/HomeScreen';
 import Quote from './Routes/QuoteScreen';
 import Calculator from './Routes/CalculatorScreen';
+import Header from './components/Header';
 
 function Layout() {
-  return (
-    <>
-      <h1>Layout</h1>
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 }
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
