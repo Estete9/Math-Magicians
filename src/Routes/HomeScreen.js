@@ -1,4 +1,4 @@
-function Home() {
+function HomeScreen() {
   return (
     // <div className='wrapper'>
     <div className="home">
@@ -6,4 +6,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default HomeScreen;
