@@ -34,9 +34,15 @@ function Quote() {
     fetchData();
   }, []);
 
-  if (isLoading) return <div>loading...</div>;
-  if (error) return <div>{`Couldn't retrieve quote. Error: ${error}`}</div>;
-  if (!quoteResponse) return null;
+  if (isLoading) {
+    return <div>loading...</div>;
+  }
+  if (error) {
+    return <div>{`Couldn't retrieve quote. Error: ${error}`}</div>;
+  }
+  if (!quoteResponse) {
+    return null;
+  }
   return (
     <div id="quote-wrapper">
       <h6 id="quote">

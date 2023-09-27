@@ -15,15 +15,17 @@ function Layout() {
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="quote" element={<Quote />} />
-          <Route path="calculator" element={<Calculator />} />
-          <Route path="*" element={<div>Page not found : (</div>} />
-        </Route>
-      </Routes>
+      <div id="wrapper">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="quote" element={<Quote />} />
+            <Route path="calculator" element={<Calculator />} />
+            <Route path="*" element={<div>Page not found : (</div>} />
+          </Route>
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

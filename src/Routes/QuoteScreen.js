@@ -1,7 +1,9 @@
+import Quote from '../components/Quote';
+
 function QuoteScreen() {
   return (
     <div>
-      <p>this is quote</p>
+      <Quote />
     </div>
   );
 }
