@@ -14,7 +14,7 @@ function Quote() {
         const response = await fetch(baseUrl, {
           method: 'GET',
           headers: {
-            'X-Api-Key': 'KdVLHMbgPDKurv3dbkJsVg==dpDNbHcHUZXmZHsx',
+            'X-Api-Key': 'API_KEY_HERE',
           },
         });
         if (!response.ok) {
