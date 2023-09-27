@@ -1,0 +1,10 @@
+.homeScreen {
+  width: 100%;
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
