@@ -2,7 +2,7 @@
 import {
   BrowserRouter, Routes, Route, Outlet,
 } from 'react-router-dom';
-import './styles/App.css';
+import './App.css';
 import Home from './Routes/HomeScreen';
 import Quote from './Routes/QuoteScreen';
 import Calculator from './Routes/CalculatorScreen';
