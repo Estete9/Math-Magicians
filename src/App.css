@@ -1,4 +1,4 @@
-.app {
+#root {
   text-align: center;
   padding: 10px 5%;
 }
@@ -13,7 +13,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .app-main {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,12 +36,10 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 #calculator-wrapper {
   width: 40%;
 }

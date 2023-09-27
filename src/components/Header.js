@@ -5,8 +5,8 @@ import styles from '../styles/header.module.css';
 function Header() {
   const links = [
     { path: '/', text: 'Home' },
-    { path: 'Quote', text: 'Quote' },
     { path: 'calculator', text: 'Calculator' },
+    { path: 'Quote', text: 'Quote' },
   ];
 
   return (
