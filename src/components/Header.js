@@ -16,7 +16,7 @@ function Header() {
         {links.map((link, index) => (
           <React.Fragment key={link.text}>
             <li>
-              <NavLink to={link.path}>{link.text}</NavLink>
+              <NavLink className={styles.navItem} to={link.path}>{link.text}</NavLink>
             </li>
             {index <= 1 && <div className={styles.separator} />}
           </React.Fragment>

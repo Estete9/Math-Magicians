@@ -20,8 +20,13 @@
 
 .navItem {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .navItem:hover {
   cursor: pointer;
+}
+
+.logo {
+  align-self: center;
 }
