@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   height: 70px;
+  background-color: #2482c0;
+  padding: 10px 40px;
 }
 
 .navbar {
@@ -13,7 +15,7 @@
 }
 
 .separator {
-  border-left: 1px solid #000;
+  border-left: 1px solid #fff;
   height: 50%;
   margin: 0 10px;
 }
