@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #2482c0;
+  padding: 10px 40px;
+}
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  list-style: none;
+  align-items: center;
+}
+
+.separator {
+  border-left: 1px solid #fff;
+  height: 50%;
+  margin: 0 10px;
+}
+
+.navItem {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  cursor: pointer;
+}
+
+.logo {
+  align-self: center;
+}

@@ -1,15 +1,32 @@
-import './App.scss';
-import Calculator from './components/Calculator';
-import Quote from './components/Quote';
+// App.js
+import {
+  BrowserRouter, Routes, Route, Outlet,
+} from 'react-router-dom';
+import './App.css';
+import Home from './Routes/HomeScreen';
+import Quote from './Routes/QuoteScreen';
+import Calculator from './Routes/CalculatorScreen';
+import Header from './components/Header';
+
+function Layout() {
+  return <Outlet />;
+}
 
 function App() {
   return (
-    <div className="app">
-      <main className="app-main">
-        <Calculator />
-        <Quote />
-      </main>
-    </div>
+    <BrowserRouter>
+      <div id="wrapper">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="quote" element={<Quote />} />
+            <Route path="calculator" element={<Calculator />} />
+            <Route path="*" element={<div>Page not found : (</div>} />
+          </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

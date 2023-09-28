@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from '../styles/quoteScreen.module.css';
 
 function Quote() {
   const baseUrl = 'https://api.api-ninjas.com/v1/quotes?category=knowledge';
@@ -34,17 +35,23 @@ function Quote() {
     fetchData();
   }, []);
 
-  if (isLoading) return <div>loading...</div>;
-  if (error) return <div>{`Couldn't retrieve quote. Error: ${error}`}</div>;
-  if (!quoteResponse) return null;
+  if (isLoading) {
+    return <div>loading...</div>;
+  }
+  if (error) {
+    return <div>{`Couldn't retrieve quote. Error: ${error}`}</div>;
+  }
+  if (!quoteResponse) {
+    return null;
+  }
   return (
-    <div id="quote-wrapper">
-      <h6 id="quote">
+    <div className={styles.quoteWrapper}>
+      <h6 className={styles.quote}>
         &quot;
         {quoteResponse[0].quote}
         &quot;
       </h6>
-      <p id="author">{quoteResponse[0].author}</p>
+      <p className={styles.author}>{quoteResponse[0].author}</p>
     </div>
   );
 }
