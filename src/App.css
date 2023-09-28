@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.app-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 #wrapper {
   display: flex;
   flex-direction: column;
@@ -17,92 +12,4 @@
   height: 100vh;
   background-color: #e0e0e0;
   padding: 10px 5%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.app-main {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.operations {
-  background-color: #f5913e;
-}
-
-.app-link {
-  color: #61dafb;
-}
-
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-#calculator-wrapper {
-  width: 40%;
-}
-
-#quote-wrapper {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-#quote {
-  font-size: 1.5rem;
-}
-
-#author {
-  font-size: 2rem;
-}
-
-#display {
-  width: 100%;
-  background-color: #858693;
-  padding: 10px;
-  font-size: 1.5rem;
-  border: 1px solid gray;
-  grid-column-end: span 4;
-}
-
-#display::placeholder {
-  color: white;
-  text-align: right;
-}
-
-#buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  width: 100%;
-  height: 100%;
-}
-
-.button {
-  border: 1px solid gray;
-  font-size: 1.2rem;
-}
-
-#zero {
-  grid-column-end: span 2;
-}
-
-.number,
-.support {
-  background-color: #e0e0e0;
-  color: black;
 }/*# sourceMappingURL=App.css.map */

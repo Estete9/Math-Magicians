@@ -1,7 +1,30 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import Display from './Display';
 import calculate from '../logic/calculate';
+import styles from '../styles/calculatorScreen.module.css';
+
+const calcButtons = [
+  { section: 'support', content: 'AC', id: 'AC' },
+  { section: 'support', content: '+/-', id: 'signChange' },
+  { section: 'support', content: '%', id: 'modulo' },
+  { section: 'operations', content: '÷', id: 'divide' },
+  { section: 'number', content: '7', id: 'seven' },
+  { section: 'number', content: '8', id: 'eight' },
+  { section: 'number', content: '9', id: 'nine' },
+  { section: 'operations', content: 'x', id: 'multiply' },
+  { section: 'number', content: '4', id: 'four' },
+  { section: 'number', content: '5', id: 'five' },
+  { section: 'number', content: '6', id: 'six' },
+  { section: 'operations', content: '-', id: 'subtract' },
+  { section: 'number', content: '1', id: 'one' },
+  { section: 'number', content: '2', id: 'two' },
+  { section: 'number', content: '3', id: 'three' },
+  { section: 'operations', content: '+', id: 'addition' },
+  { section: 'lowerRow', content: '0', id: 'zero' },
+  { section: 'lowerRow', content: '.', id: 'dot' },
+  { section: 'lowerRow', content: '=', id: 'equals' },
+];
 
 function Calculator() {
   const [calculatorState, setCalculatorState] = useState({
@@ -34,28 +57,19 @@ function Calculator() {
   };
 
   return (
-    <article id="calculator-wrapper">
-      <section id="buttons-grid">
+    <article className={styles.calculatorWrapper}>
+      <section className={styles.buttonsGrid}>
         <Display content={displayState} />
-        <Button content="AC" section="support" clickHandler={clickHandler} />
-        <Button content="+/-" section="support" clickHandler={clickHandler} />
-        <Button content="%" section="support" clickHandler={clickHandler} />
-        <Button content="÷" section="operations" clickHandler={clickHandler} />
-        <Button content="7" section="number" clickHandler={clickHandler} />
-        <Button content="8" section="number" clickHandler={clickHandler} />
-        <Button content="9" section="numbers" clickHandler={clickHandler} />
-        <Button content="x" section="operations" clickHandler={clickHandler} />
-        <Button content="4" section="number" clickHandler={clickHandler} />
-        <Button content="5" section="number" clickHandler={clickHandler} />
-        <Button content="6" section="number" clickHandler={clickHandler} />
-        <Button content="-" section="operations" clickHandler={clickHandler} />
-        <Button content="1" section="number" clickHandler={clickHandler} />
-        <Button content="2" section="number" clickHandler={clickHandler} />
-        <Button content="3" section="number" clickHandler={clickHandler} />
-        <Button content="+" section="operations" clickHandler={clickHandler} />
-        <Button content="0" section="lowerRow" clickHandler={clickHandler} />
-        <Button content="." section="lowerRow" clickHandler={clickHandler} />
-        <Button content="=" section="lowerRow" clickHandler={clickHandler} />
+        {calcButtons.map((btn) => (
+          <React.Fragment key={btn.content}>
+            <Button
+              section={btn.section}
+              content={btn.content}
+              id={btn.id}
+              clickHandler={clickHandler}
+            />
+          </React.Fragment>
+        ))}
       </section>
     </article>
   );

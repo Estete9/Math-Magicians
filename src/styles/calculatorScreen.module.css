@@ -4,5 +4,50 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.calculatorWrapper {
+  width: 40%;
+}
+
+#display {
+  width: 100%;
+  background-color: #858693;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 1px solid gray;
+  grid-column-end: span 4;
+}
+
+.display::placeholder {
+  color: white;
+  text-align: right;
+}
+
+.buttonsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  border: 1px solid gray;
+  font-size: 1.2rem;
+}
+
+.operations {
+  background-color: #f5913e;
+}
+
+#zero {
+  grid-column-end: span 2;
+}
+
+.number,
+.support {
+  background-color: #e0e0e0;
+  color: black;
 }

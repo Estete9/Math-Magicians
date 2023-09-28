@@ -1,19 +1,14 @@
 import PropTypes from 'prop-types';
+import styles from '../styles/calculatorScreen.module.css';
 
-function Button({ content, section, clickHandler }) {
-  let btnID = '';
-  const classNames = `button ${section}`;
-
-  if (content === '0') {
-    btnID = 'zero';
-  } else {
-    btnID = content;
-  }
-
+function Button({
+  section, content, id, clickHandler,
+}) {
+  const combinedClasses = `${styles.button} ${styles[section]}`;
   return (
     <button
-      className={classNames}
-      id={btnID}
+      id={styles[id]}
+      className={combinedClasses}
       type="button"
       onClick={() => {
         clickHandler(content);
@@ -25,8 +20,9 @@ function Button({ content, section, clickHandler }) {
 }
 
 Button.propTypes = {
-  content: PropTypes.string.isRequired,
   section: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
